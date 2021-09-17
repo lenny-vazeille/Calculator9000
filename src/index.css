@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+:root{
+    --main-bg-color: black;    
+    --font-1: 'Source Code Pro', monospace;
+    --font-1-color: rgb(56, 56, 56);
+    --font-p-color: rgb(0, 0, 0);
+    --font-screen-color: rgb(85, 85, 85);
+    --font-p-c-color: white;    
+    --font-p-c-size:1rem;
+    --font-p-size:1.25rem;
+    --font-screen-size:1rem;
+
+}
+body{
+    background-color:var(--main-bg-color) ;
+    font-family: var(--font-1);
+    color: var(--font-1-color);
+    font-size: 1rem;
+}
+/** component  **/
+/* Container parent  */
+section {
+  position: absolute;
+  TOP: 5%;
+  left: 35%;
+  width: 32%;
+}
+.Calculator {
+    position: absolute;
+    left: 30%;
+    TOP: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #310202;
+    border-radius: 3%;
+    width: 35%;
+    height: -6%;
+    -webkit-border-radius: 6%;
+    -moz-border-radius: 3%;
+    -ms-border-radius: 3%;
+    -o-border-radius: 3%;
+    box-shadow: inset 3px -13px 39px -14px #000000, 5px 20px 82px 10px black, -4px -2px 246px 20px #500505b8, inset 10px 10px 242px 11px #311614, -9px -20px 17px 16px #000000a1, inset -9px 12px 9px 7px #f91303;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in;
+    -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -ms-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+}
+.bloc_button {
+    background: #00000073;
+    box-shadow: inset 12px 2px 3px -5px #232323;
+    margin: 4px;
+    padding: 5px;
+    border-radius: 5px 100px 10px 180px;
+    -webkit-border-radius: 5px 100px 122px 180px;
+    -moz-border-radius: 5px 100px 10px 180px;
+    -ms-border-radius: 5px 100px 10px 180px;
+    -o-border-radius: 5px 100px 10px 180px;
+}
+.multiply {
+    margin-top: 8px;
+}
+
+/* container */
+.input {
+    font-size: var(--font-screen-size);
+    font-family: var(--font-1);
+    border: 2px SOLID #0000007a;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-align: right;
+    padding: -4px;
+    padding: 21px;
+    margin: 43px;
+    width: 65%;
+    box-shadow: inset 2px 1px 18px black, 1px -1px 56px 1px #d2170a;
+    font-size: var(--font-p-size);
+    color:var(--font-p-color);
+}
+.input:focus,
+.input:active,
+button:focus,
+button:active{
+    outline:none;
+}
+.title {
+    display: flex;
+    font-size: var(--font-screen-size);
+    letter-spacing: 3px;
+    height: 50px;
+    background: rgb(108,108,108);
+    background: linear-gradient(348deg, rgba(108,108,108,1) 0%, rgba(184,183,183,1) 4%, rgba(255,255,255,1) 75%, rgba(255,255,255,1) 89%, rgba(158,158,158,1) 99%);
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    border-radius: 7px;
+    box-shadow: inset 2px 1px 18px black, 1px -1px 56px 1px #d2170a;
+}
+    /* container */
+    .Operation, .Number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 11px -2px;
+    }
+
+.beautifulButton, .ClearButton{
+    color:var(--font-p-c-color) ;
+    font-size: var(--font-p-c-size);
+}
+.beautifulButton{
+    font-size: var(--font-p-size);
+}
+button {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: -1px -3px 2px 2px #480101, 3px 4px 6px 2px #4c2525, inset 0px 0px 9px 9px #cecece;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 30ms ease-in;
+    -webkit-transition: 30ms ease-in;
+    -moz-transition: 30ms ease-in;
+    -ms-transition: 30ms ease-in;
+    -o-transition: 30ms ease-in;
+    color: var(--font-p-color);
+    font-size: var(--font-p-size);
+    font-weight: bolder;
+}
+button:hover {
+    margin: 10px;
+    border: none;
+    border-radius: 49%;
+    -webkit-border-radius: 49%;
+    -moz-border-radius: 49%;
+    -ms-border-radius: 49%;
+    -o-border-radius: 49%;
+    box-shadow: inset 0px 0px 3px 5px white, -1px 2px 22px 4px #b7afaf, -1px 1px 78px 8px #a2a0a0d9, inset -5px -1px 7px 0px #000000, 10px 10px 31px 13px #311614;
+    transition: all 30ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: all 30ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: all 30ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: all 30ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: all 30ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.Equal {
+    position: relative;
+    left: 0%;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+/* content  */
+#ope {
+    color: var(--font-p-c-color);
+    background: #dc4136;
+    box-shadow: -1px -3px 2px 2px #480101, 3px 4px 6px 2px #4c2525, inset 0px 0px 9px 9px #cecece;
+    transition: all 30ms ease-in;
+    -webkit-transition: all 30ms ease-in;
+    -moz-transition: all 30ms ease-in;
+    -ms-transition: all 30ms ease-in;
+    -o-transition: all 30ms ease-in;
+}
+#ope:active{
+    background: #dc4136;
+    color: var(--font-p-c-color);
+    box-shadow: -2px 0px 7px 7px #82130c, 3px 4px 10px 2px #820d05, inset 0px 0px 9px 9px #d63030;
+    transition: all 30ms ease-in;
+    -webkit-transition: all 30ms ease-in;
+    -moz-transition: all 30ms ease-in;
+    -ms-transition: all 30ms ease-in;
+    -o-transition: all 30ms ease-in;
+}
+#ope:active p{
+    color: var(--font-p-c-color);
+}
+#ope:hover{
+    background: #dc4136;
+    box-shadow: -1px -3px 8px 2px #dc4136, 0px 3px 7px 6px #480101, inset 0px 0px 0px 9px #0c0c0c61;
+    transition: all 30ms ease-in;
+    -webkit-transition: all 30ms ease-in;
+    -moz-transition: all 30ms ease-in;
+    -ms-transition: all 30ms ease-in;
+    -o-transition: all 30ms ease-in;
+
+}
+#clear {
+    background: #671616;
+    box-shadow: -1px -3px 2px 2px #480101, 3px 4px 6px 2px #4c2525, inset 0px 0px 9px 9px #cecece;
+    transition: all 30ms ease-in;
+    -webkit-transition: all 30ms ease-in;
+    -moz-transition: all 30ms ease-in;
+    -ms-transition: all 30ms ease-in;
+    -o-transition: all 30ms ease-in;
+}
+#clear:hover {
+    background: #a55b5b;
+    box-shadow: 0px 0px 54px 32px #480101, 3px 4px 6px 2px #4c2525, inset 0px 0px 9px 9px #cecece;
+}
+#clear:active {
+    background: #af2323;
+    box-shadow: 0px 0px 54px 32px #480101, 3px 4px 6px 2px #4c2525, inset 0px 0px 9px 9px #cecece;
+}
+#clear:active p{
+    color: var(--font-p-color);
+}
+#equal {
+    background: #1855ff;
+    box-shadow: -1px -3px 8px 2px #1855ff, 0px 3px 7px 6px #1a3173, inset 0px 0px 0px 9px #cecece;
+    transition: all 30ms ease-in;
+    -webkit-transition: all 30ms ease-in;
+    -moz-transition: all 30ms ease-in;
+    -ms-transition: all 30ms ease-in;
+    -o-transition: all 30ms ease-in;
+}
+#equal:hover {
+    background: #1855ff;
+    box-shadow: 0px 0px 91px 28px #0042ce, 3px 4px 6px 2px #1a3173, inset 0px 0px 9px 9px #cecece;
+}
+#equal:active {
+    background: #0077ff;
+    box-shadow: 0px 0px 54px 32px #1855ff, 3px 4px 6px 2px #1a3173, inset 0px 0px 9px 9px #cecece;
+}
+.value{
+  font-size: var(--font-screen-size);
+  color: var(--font-screen-color);
+}
+.calc{
+  font-weight: bolder;
+}
+/* MEDIA QUERIES */
+@media screen and (min-width:1600px){
+    .Operation, .Number {
+        padding: 15px 124px;
+    }
+    .calculator {
+        left: 31%;
+        TOP: 18%;
+        right: 50;
+        transition: all 1s ease-in;
+        -webkit-transition: all 1s ease-in;
+        -moz-transition: all 1s ease-in;
+        -ms-transition: all 1s ease-in;
+        -o-transition: all 1s ease-in;
+    }
+}
+@media screen  and (max-width: 1000px){
+    body{ 
+        transition:all 1s ease-in; 
+        -webkit-transition:all 1s ease-in; 
+        -moz-transition:all 1s ease-in; 
+        -ms-transition:all 1s ease-in; 
+        -o-transition:all 1s ease-in; 
+    }
+    .calculator {
+        left: 16%;
+        TOP: 90px;
+        width: 62%;
+        height: -6%;
+    }
+}
+@media screen and (max-width: 900px) {
+    button {
+        width: 50px;
+        height: 50px;
+    }
+    .Screen {
+        padding: -4px;
+        padding: 10px;
+        margin: -3px;
+        width: 82%;
+    }
+}
+@media screen and (max-width:650px) {
+    .Screen {
+        padding: 10px;
+        margin: unset;
+        width: 82%;
+    }
+    button {
+        width: 37px;
+        height: 37px;
+    }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+    /* Portrait and Landscape */
+    @media only screen 
+        and (min-device-width: 320px) 
+        and (max-device-width: 568px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+            .Operation, .Number {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: space-around;
+                flex-wrap: wrap;
+                flex-direction: row;
+                padding: 0px 0px;
+            }
+             
+   
+        .Screen {
+            margin: unset;
+        }
+        .Operation, .Number {
+            padding: unset;
+        }
+} 
+    /* Landscape */    
+    @media only screen 
+        and (min-device-width: 320px) 
+        and (max-device-width: 568px) 
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (orientation: landscape) { 
+            .calculator {
+                left: 8%;
+                TOP: 23px;
+                width: 85%;
+                height: -6%;
+            }
+            .Operation, .Number {
+                padding: unset;
+                margin: -6px;
+            }
+
+    }
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+    /* Portrait */
+    @media only screen 
+        and (min-device-width: 375px) 
+        and (max-device-width: 667px) 
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (orientation: portrait) { 
+            .calculator {
+                left: 8%;
+                TOP: 124px;
+                width: 82%;
+                height: -6%;
+            }
+    }
+
+    /* Landscape */
+    @media only screen 
+        and (min-device-width: 375px) 
+        and (max-device-width: 667px) 
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (orientation: landscape) { 
+            .calculator {
+                left: 8%;
+                TOP: 50px;
+                width: 82%;
+                height: -6%;
+            }
+            .Screen {
+                margin: unset;
+            }
+            .Operation, .Number {
+                padding: unset;
+            }
+            
+    }
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+    /* Landscape */
+    @media only screen 
+        and (min-device-width: 414px) 
+        and (max-device-width: 736px) 
+        and (-webkit-min-device-pixel-ratio: 3)
+        and (orientation: landscape) { 
+        .calculator {
+            left: 19%;
+            TOP: 56px;
+            width: 62%;
+            height: -6%;
+        }
+        .Operation, .Number {
+            padding: 0px 56px;
+        }
+        .Screen {
+            padding: 0;
+            margin: 0;
+            width: 82%;
+        }
+        button {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+        }
+        
+    }
+
+/* ----------- iPhone X ----------- */
+    /* Portrait */
+    @media only screen 
+        and (min-device-width: 375px) 
+        and (max-device-width: 812px) 
+        and (-webkit-min-device-pixel-ratio: 3)
+        and (orientation: portrait) { 
+            
+    }
+
+    /* Landscape */
+    @media only screen 
+        and (min-device-width: 375px) 
+        and (max-device-width: 812px) 
+        and (-webkit-min-device-pixel-ratio: 3)
+        and (orientation: landscape) { 
+            .calculator {
+                left: 4%;
+                TOP: 0;
+                width: 65%;
+                height: -6%;
+            }
+            .Screen {
+                margin: unset;
+            }
+            button {
+                width: 40px;
+                height: 40px;
+            }
+            .Operation, .Number {
+                padding: 0px 78px;
+            }
+    }
+
+    /* -------iPads (portrait) -----*/
+    @media only screen
+        and (min-device-width : 768px)
+        and (max-device-width : 1024px)
+        and (orientation : portrait) {
+            button {
+                width: 60px;
+                height: 60px;
+            }
+    }
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape) {
+        .calculator {
+            TOP: 69px;
+        }
+    }
+    
+
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+    /* Portrait */
+    @media screen 
+        and (device-width: 320px) 
+        and (device-height: 640px) 
+        and (-webkit-device-pixel-ratio: 3) 
+        and (orientation: portrait) {
+            button {
+                width: 46px;
+                height: 46px;
+                margin: 2px;
+            }
+        }
+
+    /* Landscape */
+    @media screen 
+        and (device-width: 320px) 
+        and (device-height: 640px) 
+        and (-webkit-device-pixel-ratio: 3) 
+        and (orientation: landscape) {
+            .calculator {
+                left: 0%;
+                TOP: 1px;
+                width: 62%;
+                height: -6%;
+            }
+            button {
+                width: 30px;
+                height: 30px;
+                margin: 2px 17px;
+            }
+        }
